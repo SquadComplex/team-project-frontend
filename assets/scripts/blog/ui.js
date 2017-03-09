@@ -2,16 +2,23 @@
 
 const blogHandlebars = require('../templates/blog-index.handlebars');
 
-const onIndexSuccess = function(data){
-for (let i = 0; i < data.blogs.length; i++) {
-  let date = data.blogs[i].createdAt;
-  data.blogs[i].createdAt = date.slice(0, 10);
-}
+const indexSuccess = function (data) {
+  for (let i = 0; i < data.blogs.length; i++) {
+    let date = data.blogs[i].createdAt;
+    data.blogs[i].createdAt = date.slice(0, 10);
+  }
 
-let blogsIndexHtml = blogHandlebars({ blogs: data.blogs});
-$('#content').html(blogsIndexHtml);
+  let blogsIndexHtml = blogHandlebars({
+    blogs: data.blogs,
+  });
+  $('#content').html(blogsIndexHtml);
+};
+
+const createSuccess = () => {
+  $('#status-box').text('Blog Created.');
 };
 
 module.exports = {
-  onIndexSuccess
+  createSuccess,
+  indexSuccess,
 };
