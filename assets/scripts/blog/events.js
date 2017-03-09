@@ -24,13 +24,26 @@ const onCreateBlogs = function (event) {
   .catch(ui.failure);
 };
 
+const onUpdateBlog = function (event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  let id = event.target.getAttribute('data-id');
+  api.updateBlog(id, data)
+  .then(ui.createSuccess)
+  .then(api.indexBlogs)
+  .then(ui.indexSuccess)
+  .catch(ui.failure);
+};
+
 const addBlogHandlers = function () {
   $('#index-blog').on('click', onIndexBlogs);
   $('#create-blog').on('submit', onCreateBlogs);
+  $('#content').on('submit', '#update-blog', onUpdateBlog);
 };
 
 module.exports = {
   onCreateBlogs,
   onIndexBlogs,
+  onUpdateBlog,
   addBlogHandlers,
 };

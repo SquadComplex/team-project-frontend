@@ -3,13 +3,19 @@
 <div data-id="{{blog.id}}">
   <!-- Are we going to display id? -->
   <div class="handlebars-container">
-    <h3 class="id" data-id="{{blog.id}}">Blog ID: {{blog.id}}</h3>
     <h3 class="title">{{blog.title}}</h3>
     <p class="author">{{blog.author}}</p>
     <p class="content">{{blog.content}}</p>
     <p class="date">{{blog.createdAt}}</p>
+    <form class="blogs" id="update-blog" data-id="{{blog.id}}">
+      <div class="form-group">
+        <input type="text" name="blog[title]" placeholder="Title" value="{{blog.title}}">
+        <input type="text" name="blog[author]" placeholder="Author" value="{{blog.author}}">
+        <textarea rows="10" cols="50" name="blog[content]" placeholder="Content">{{blog.content}}</textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Update A Blog</button>
+    </form>
   </div>
-  <!-- confirm how to display date -->
 
 </div>
 
