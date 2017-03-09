@@ -1,0 +1,15 @@
+
+{{#each blogs as |blog|}}
+<div data-id="{{blog.id}}">
+  <!-- Are we going to display id? -->
+  <h3 class="id">Blog ID: {{blog.id}}</h3>
+  <h3 class="title">{{blog.title}}</h3>
+  <p class="author">{{blog.author}}</p>
+  <p class="content">{{blog.content}}</p>
+  <p class="date">{{blog.date}}</p>
+  <!-- confirm how to display date -->
+
+</div>
+
+
+{{/each}}
