@@ -12,7 +12,99 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+    <div id="authContainer">
+      <div id="authButtonGroup">
+      <button class="btn btn-primary" id="signUpButton" type="button" data-toggle="collapse" data-target="#collapseSignUp" aria-expanded="false" aria-controls="collapseSignUp">
+        Sign Up
+      </button>
+      <button class="btn btn-primary" id="signInButton" type="button" data-toggle="collapse" data-target="#collapseSignIn" aria-expanded="false" aria-controls="collapseSignIn">
+        Sign In
+      </button>
+      <button class="btn btn-primary hidden" id="changePassButton" type="button" data-toggle="collapse" data-target="#collapseChangePass" aria-expanded="false" aria-controls="collapseChangePass">
+        Change Password
+      </button>
+      <button type="button" class="btn btn-primary hidden" id="sign-out">
+        Sign Out!
+      </button>
+
+    <div class="accordion-group">
+      <div class="collapse" id="collapseSignUp">
+        <div class="well">
+          <form id="sign-up">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <label>
+            Email
+            <input type="text" id="account-name" class="signup-field" name="credentials[email]">
+          </label>
+              <label>
+            Password
+            <input type="password" class="signup-field" name="credentials[password]">
+          </label>
+              <label>
+            Password Confirmation
+            <input type="password" class="signup-field" name="credentials[password_confirmation]">
+          </label>
+              <input type="submit" name="submit" value="Sign up!">
+            </fieldset>
+            <div class="form-message" id="sign-up-message"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="collapse" id="collapseSignIn">
+        <div class="well">
+          <form id="sign-in">
+           <fieldset>
+             <legend>Sign in!</legend>
+             <label>
+             Email
+             <input type="text" class="signin-field" id="account-name-signin" name="credentials[email]">
+           </label>
+             <label>
+             Password
+             <input type="password" class="signin-field" name="credentials[password]">
+           </label>
+             <input type="submit" name="submit" value="Sign in!">
+           </fieldset>
+           <div class="form-message" id="sign-in-message"></div>
+         </form>
+        </div>
+      </div>
+
+      <div class="collapse" id="collapseChangePass">
+        <div class="well">
+          <form id="change-password">
+           <fieldset>
+             <legend>Change Password!</legend>
+             <label>
+             Current Password
+             <input type="password" class="change-pass-field" name="passwords[old]">
+           </label>
+             <label>
+             New Password
+             <input type="password" class="change-pass-field" name="passwords[new]">
+           </label>
+             <input type="submit" name="submit" value="Change Password!">
+           </fieldset>
+           <div class="form-message" id="change-pass-message"></div>
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div id="status-box"></div>
+
+      <h1 id="CMStitle">Content Management System</h1>
+      <br>
+      <br>
+      <br>
+
+    <button id="index-blog" class="btn btn-primary" type="button">Show My Blogs</button>
+    <div id="content" class="content">
+    </div>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
