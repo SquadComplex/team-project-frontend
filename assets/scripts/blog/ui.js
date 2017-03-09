@@ -7,7 +7,7 @@ const onIndexSuccess = function(data){
   console.log(data);
 }
 let blogsIndexHtml = blogHandlebars({ blogs: data.blogs});
-$('#container').html(blogsIndexHtml);
+$('#content').html(blogsIndexHtml);
 };
 
 module.exports = {
