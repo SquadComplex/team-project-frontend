@@ -24,6 +24,9 @@ const signInSuccess = () => {
   $('#signInButton').addClass('hidden');
   $('#changePassButton').removeClass('hidden');
   $('#sign-out').removeClass('hidden');
+
+  $('#collapseSignUp').collapse('hide');
+  $('#collapseSignIn').collapse('hide');
 };
 
 const signInFail = () => {
@@ -46,6 +49,8 @@ const signOutSuccess = () => {
   $('#signInButton').removeClass('hidden');
   $('#changePassButton').addClass('hidden');
   $('#sign-out').addClass('hidden');
+
+  $('#collapseChangePass').collapse('hide');
 };
 
 module.exports = {
