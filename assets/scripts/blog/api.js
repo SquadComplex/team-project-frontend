@@ -43,8 +43,19 @@ const updateBlog = function (id, data) {
   });
 };
 
+const destroyBlog = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/blogs/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: `Token token=${store.user.token}`,
+    },
+  });
+};
+
 module.exports = {
   indexBlogs,
   createBlog,
   updateBlog,
+  destroyBlog,
 };

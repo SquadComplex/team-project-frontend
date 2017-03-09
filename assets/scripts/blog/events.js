@@ -35,10 +35,21 @@ const onUpdateBlog = function (event) {
   .catch(ui.failure);
 };
 
+const onDestroyBlog = function (event) {
+  event.preventDefault();
+  let id = event.target.getAttribute('data-id');
+  api.destroyBlog(id)
+  .then(ui.destroySuccess)
+  .then(api.indexBlogs)
+  .then(ui.indexSuccess)
+  .catch(ui.failure);
+};
+
 const addBlogHandlers = function () {
   $('#index-blog').on('click', onIndexBlogs);
   $('#create-blog').on('submit', onCreateBlogs);
   $('#content').on('submit', '#update-blog', onUpdateBlog);
+  $('#content').on('click', '#delete-blog', onDestroyBlog);
 };
 
 module.exports = {
