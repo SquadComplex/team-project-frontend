@@ -18,6 +18,10 @@ const createSuccess = () => {
   $('#status-box').text('Blog Created.');
 };
 
+const updateSuccess = () => {
+  $('#status-box').text('Page Updated.');
+};
+
 const destroySuccess = () => {
   $('#status-box').text('Blog Deleted.');
 };
@@ -25,5 +29,6 @@ const destroySuccess = () => {
 module.exports = {
   createSuccess,
   indexSuccess,
+  updateSuccess,
   destroySuccess,
 };

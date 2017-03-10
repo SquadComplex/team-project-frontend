@@ -109,13 +109,25 @@
         <br>
         <textarea rows="10" cols="50" name="blog[content]" placeholder="Content"></textarea>
       </div>
-      <button type="submit" class="btn btn-default">Add A Blog</button>
+      <button type="submit" class="btn btn-success">Add A Blog</button>
     </form>
-    </div>
     <br>
     <br>
-  <button id="index-blog" class="btn btn-primary" type="button">Show My Blogs</button>
+  <button id="index-blog" class="btn btn-info" type="button">Show My Blogs</button>
   <div id="content" class="content">
+  </div>
+  <form class="pages" id="create-page">
+    <div class="form-group">
+      <input type="text" name="page[header]" placeholder="Header">
+      <textarea rows="10" cols="50" id="page-textarea" name="page[body]" placeholder="Body"></textarea>
+      <input type="text" name="page[footer]" placeholder="Footer">
+      <br>
+      <br>
+    </div>
+    <button type="submit" class="btn btn-success">Create A Page</button>
+  </form>
+  <button id="index-page" class="btn btn-info" type="button">Show My Pages</button>
+  <div id="page-content" class="content">
   </div>
   <br>
   <br>

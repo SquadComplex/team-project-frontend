@@ -1,0 +1,12 @@
+
+{{#each pages as |page|}}
+<div data-id="{{page.id}}">
+  <!-- Are we going to display id? -->
+  <div class="handlebars-container">
+    <h3 class="header" data-id="{{page.id}}"><span id="page-header" data-id="{{page.id}}">{{page.header}}</span></h3>
+  </div>
+
+</div>
+
+
+{{/each}}

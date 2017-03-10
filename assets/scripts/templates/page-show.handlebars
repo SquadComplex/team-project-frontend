@@ -1,0 +1,19 @@
+
+<div data-id="{{page.id}}">
+  <!-- Are we going to display id? -->
+  <div class="handlebars-container">
+    <h1 class="header">{{page.header}}</h1>
+    <p class="body"><pre class="text-body">{{page.body}}</pre></p>
+    <footer class="footer">{{page.footer}}</footer>
+    <form class="pages" id="update-page" data-id="{{page.id}}">
+      <div class="form-group">
+        <input type="text" name="page[header]" placeholder="Header" value="{{page.header}}">
+        <textarea rows="10" cols="50" name="page[body]" placeholder="Body">{{page.body}}</textarea>
+        <input type="text" name="page[footer]" placeholder="Footer" value="{{page.footer}}">
+      </div>
+      <button type="submit" class="btn btn-success">Update A Page</button>
+    </form>
+    <button type="button" id="delete-page" data-id="{{page.id}}" class="btn btn-danger">Delete A Page</button>
+  </div>
+
+</div>

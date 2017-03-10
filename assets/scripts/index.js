@@ -12,10 +12,12 @@ $(() => {
 
 const authEvents = require('./auth/events.js');
 const blogEvents = require('./blog/events.js');
+const pageEvents = require('./page/events.js');
 
 $(() => {
   authEvents.addHandlers();
   blogEvents.addBlogHandlers();
+  pageEvents.addPageHandlers();
   $('#authButtonGroup').on('show.bs.collapse','.collapse', function() {
     $('#authButtonGroup').find('.collapse.in').collapse('hide');
   });
