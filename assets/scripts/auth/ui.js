@@ -19,12 +19,10 @@ const signUpFail = () => {
 // On sign in, un-hide game board elements
 const signInSuccess = () => {
   $('#status-box').text('Sign In Successful');
-
   $('#signUpButton').addClass('hidden');
   $('#signInButton').addClass('hidden');
   $('#changePassButton').removeClass('hidden');
   $('#sign-out').removeClass('hidden');
-
   $('#collapseSignUp').collapse('hide');
   $('#collapseSignIn').collapse('hide');
 };
@@ -44,12 +42,10 @@ const changePassFail = () => {
 // On sign out, hide game board elements
 const signOutSuccess = () => {
   $('#status-box').text('Sign Out Successful.  Please Sign Up or Sign In to play again.');
-
   $('#signUpButton').removeClass('hidden');
   $('#signInButton').removeClass('hidden');
   $('#changePassButton').addClass('hidden');
   $('#sign-out').addClass('hidden');
-
   $('#collapseChangePass').collapse('hide');
 };
 

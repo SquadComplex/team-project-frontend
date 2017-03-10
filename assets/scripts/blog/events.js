@@ -47,6 +47,7 @@ const onDestroyBlog = function (event) {
 
 const addBlogHandlers = function () {
   $('#index-blog').on('click', onIndexBlogs);
+  $('#index-my-blog').on('click', onIndexBlogs);
   $('#create-blog').on('submit', onCreateBlogs);
   $('#content').on('submit', '#update-blog', onUpdateBlog);
   $('#content').on('click', '#delete-blog', onDestroyBlog);
