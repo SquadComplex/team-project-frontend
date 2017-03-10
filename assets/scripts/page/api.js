@@ -14,6 +14,16 @@ const indexPages = function () {
     });
   };
 
+const showPage = function (id) {
+    return $.ajax({
+      url: config.apiOrigin + '/pages/' + id,
+      method: 'GET',
+      headers: {
+        Authorization: `Token token=${store.user.token}`,
+      },
+    });
+  };
+
 const createPage = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/pages',
@@ -48,6 +58,7 @@ const destroyPage = function (id) {
 
 module.exports = {
   indexPages,
+  showPage,
   createPage,
   updatePage,
   destroyPage,

@@ -13,6 +13,14 @@ const onIndexPages = function (event) {
     .catch(ui.onError);
 };
 
+const onShowPage = function (event) {
+  event.preventDefault();
+  let id = event.target.getAttribute('data-id');
+  api.showPage(id)
+    .then(ui.showSuccess)
+    .catch(ui.onError);
+};
+
 const onCreatePages = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -49,12 +57,10 @@ const addPageHandlers = function () {
   $('#index-page').on('click', onIndexPages);
   $('#create-page').on('submit', onCreatePages);
   $('#content').on('submit', '#update-page', onUpdatePage);
+  $('#page-content').on('click', '#page-header', onShowPage);
   $('#content').on('click', '#delete-page', onDestroyPage);
 };
 
 module.exports = {
-  onCreatePages,
-  onIndexPages,
-  onUpdatePage,
   addPageHandlers,
 };
