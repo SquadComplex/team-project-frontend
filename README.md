@@ -5,6 +5,7 @@ WireFrames:
 http://imgur.com/a/4llbD
 
 
+
 USER STORIES
 - As a guest I want to view blogs
 - As a guest I want to view pages
