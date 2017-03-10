@@ -31,6 +31,7 @@ const indexAllSuccess = function (data) {
 
 const createSuccess = () => {
   $('#status-box').text('Blog Created.');
+
 };
 
 const updateSuccess = () => {

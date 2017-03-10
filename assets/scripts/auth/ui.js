@@ -9,8 +9,10 @@ const failure = () => {
 };
 
 const signUpSuccess = () => {
-  $('#status-box').text('Account Created');
+  let account = $('#account-name').val();
+  $('#status-box').text('Account Created: ' + account);
 };
+
 
 const signUpFail = () => {
   $('#sign-up-message').text('Either the email is not valid or the passwords do not match.');
@@ -18,7 +20,8 @@ const signUpFail = () => {
 
 // On sign in, un-hide game board elements
 const signInSuccess = () => {
-  $('#status-box').text('Sign In Successful');
+  let account = $('#account-name-signin').val();
+  $('#status-box').text('Welcome, ' + account + ' !');
   $('#signUpButton').addClass('hidden');
   $('#signInButton').addClass('hidden');
   $('#changePassButton').removeClass('hidden');
@@ -27,6 +30,7 @@ const signInSuccess = () => {
   $('#collapseSignIn').collapse('hide');
   $('#blog-tab').show();
   $('#page-tab').show();
+
 };
 
 const signInFail = () => {
