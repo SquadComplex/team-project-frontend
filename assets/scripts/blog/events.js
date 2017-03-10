@@ -29,7 +29,7 @@ const onUpdateBlog = function (event) {
   let data = getFormFields(event.target);
   let id = event.target.getAttribute('data-id');
   api.updateBlog(id, data)
-  .then(ui.createSuccess)
+  .then(ui.updateSuccess)
   .then(api.indexBlogs)
   .then(ui.indexSuccess)
   .catch(ui.failure);

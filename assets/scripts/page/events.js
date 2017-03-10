@@ -37,7 +37,7 @@ const onUpdatePage = function (event) {
   let data = getFormFields(event.target);
   let id = event.target.getAttribute('data-id');
   api.updatePage(id, data)
-  .then(ui.createSuccess)
+  .then(ui.updateSuccess)
   .then(api.indexPages)
   .then(ui.indexSuccess)
   .catch(ui.failure);
@@ -56,9 +56,9 @@ const onDestroyPage = function (event) {
 const addPageHandlers = function () {
   $('#index-page').on('click', onIndexPages);
   $('#create-page').on('submit', onCreatePages);
-  $('#content').on('submit', '#update-page', onUpdatePage);
+  $('#page-content').on('submit', '#update-page', onUpdatePage);
   $('#page-content').on('click', '#page-header', onShowPage);
-  $('#content').on('click', '#delete-page', onDestroyPage);
+  $('#page-content').on('click', '#delete-page', onDestroyPage);
 };
 
 module.exports = {
