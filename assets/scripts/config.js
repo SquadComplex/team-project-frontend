@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://guarded-mountain-32914.herokuapp.com/',
+    production: 'https://guarded-mountain-32914.herokuapp.com',
   },
 };
 
