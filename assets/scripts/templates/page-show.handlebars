@@ -1,24 +1,19 @@
 
-{{#each blogs as |blog|}}
-<div data-id="{{blog.id}}">
+<div data-id="{{page.id}}">
   <!-- Are we going to display id? -->
   <div class="handlebars-container">
-    <h3 class="title">{{blog.title}}</h3>
-    <p class="author">{{blog.author}}</p>
-    <p class="content">{{blog.content}}</p>
-    <p class="date">{{blog.createdAt}}</p>
-    <form class="blogs" id="update-blog" data-id="{{blog.id}}">
+    <h1 class="header">{{page.header}}</h1>
+    <p class="body">{{page.body}}</p>
+    <footer class="footer">{{page.footer}}</footer>
+    <form class="pages" id="update-page" data-id="{{page.id}}">
       <div class="form-group">
-        <input type="text" name="blog[title]" placeholder="Title" value="{{blog.title}}">
-        <input type="text" name="blog[author]" placeholder="Author" value="{{blog.author}}">
-        <textarea rows="10" cols="50" name="blog[content]" placeholder="Content">{{blog.content}}</textarea>
+        <input type="text" name="page[header]" placeholder="Header" value="{{page.header}}">
+        <textarea rows="10" cols="50" name="page[body]" placeholder="Body">{{page.body}}</textarea>
+        <input type="text" name="page[footer]" placeholder="Footer" value="{{page.footer}}">
       </div>
-      <button type="submit" class="btn btn-default">Update A Blog</button>
+      <button type="submit" class="btn btn-success">Update A Page</button>
     </form>
-    <button type="button" id="delete-blog" data-id="{{blog.id}}" class="btn btn-default">Delete A Blog</button>
+    <button type="button" id="delete-page" data-id="{{page.id}}" class="btn btn-danger">Delete A Page</button>
   </div>
 
 </div>
-
-
-{{/each}}
