@@ -5,7 +5,6 @@ const config = require('../config');
 const store = require('../store');
 
 const indexPages = function () {
-  if (store.user) {
     return $.ajax({
       url: config.apiOrigin + '/pages',
       method: 'GET',
@@ -13,13 +12,7 @@ const indexPages = function () {
         Authorization: `Token token=${store.user.token}`,
       },
     });
-  } else {
-    return $.ajax({
-      url: config.apiOrigin + '/pages',
-      method: 'GET',
-    });
-  }
-};
+  };
 
 const createPage = function (data) {
   return $.ajax({

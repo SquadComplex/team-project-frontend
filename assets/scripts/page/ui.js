@@ -1,17 +1,12 @@
 'use strict';
 
-const pageHandlebars = require('../templates/page-index.handlebars');
+const pageTitleHandlebars = require('../templates/page-title-index.handlebars');
 
 const indexSuccess = function (data) {
-  for (let i = 0; i < data.pages.length; i++) {
-    let date = data.pages[i].createdAt;
-    data.pages[i].createdAt = date.slice(0, 10);
-  }
-
-  let pagesIndexHtml = pageHandlebars({
+  let pagesIndexHtml = pageTitleHandlebars({
     pages: data.pages,
   });
-  $('#content').html(pagesIndexHtml);
+  $('#page-content').html(pagesIndexHtml);
 };
 
 const createSuccess = () => {
