@@ -1,0 +1,15 @@
+
+{{#each blogs as |blog|}}
+<div data-id="{{blog.id}}">
+  <!-- Are we going to display id? -->
+  <div class="handlebars-container">
+    <h3 class="title">{{blog.title}}</h3>
+    <p class="author">{{blog.author}}</p>
+    <p class="content"><pre class="text-body">{{blog.content}}</pre></p>
+    <p class="date">{{blog.createdAt}}</p>
+  </div>
+
+</div>
+
+
+{{/each}}

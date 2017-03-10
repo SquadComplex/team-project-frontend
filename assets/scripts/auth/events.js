@@ -54,8 +54,6 @@ const onSignOut = function (event) {
 };
 
 const addHandlers = () => {
-  $('#changePassButton').hide();
-  // $('#sign-out').hide();
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit', onChangePassword);
