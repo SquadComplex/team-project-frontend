@@ -11,14 +11,14 @@ const failure = () => {
 const signUpSuccess = () => {
   let account = $('#account-name').val();
   $('#status-box').text('Account Created: ' + account);
+  $('.signup-field').val('');
+  $('#collapseSignUp').collapse('hide');
 };
-
 
 const signUpFail = () => {
   $('#sign-up-message').text('Either the email is not valid or the passwords do not match.');
 };
 
-// On sign in, un-hide game board elements
 const signInSuccess = () => {
   let account = $('#account-name-signin').val();
   $('#status-box').text('Welcome, ' + account + ' !');
@@ -30,7 +30,7 @@ const signInSuccess = () => {
   $('#collapseSignIn').collapse('hide');
   $('#blog-tab').show();
   $('#page-tab').show();
-
+  $('.signin-field').val('');
 };
 
 const signInFail = () => {
@@ -39,13 +39,14 @@ const signInFail = () => {
 
 const changePassSuccess = () => {
   $('#status-box').text('Password Changed Successfully');
+  $('.change-pass-field').val('');
+  $('#collapseChangePass').collapse('hide');
 };
 
 const changePassFail = () => {
   $('#change-pass-message').text('Please fill out the fields.');
 };
 
-// On sign out, hide game board elements
 const signOutSuccess = () => {
   $('#status-box').text('Sign Out Successful.  Please Sign Up or Sign In to play again.');
   $('#signUpButton').removeClass('hidden');
