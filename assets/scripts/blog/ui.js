@@ -4,6 +4,7 @@ const blogHandlebars = require('../templates/blog-index.handlebars');
 const allBlogHandlebars = require('../templates/blog-all-index.handlebars');
 
 const indexSuccess = function (data) {
+  data.blogs = data.blogs.reverse();
   for (let i = 0; i < data.blogs.length; i++) {
     let date = data.blogs[i].createdAt;
     data.blogs[i].createdAt = date.slice(0, 10);
@@ -16,6 +17,7 @@ const indexSuccess = function (data) {
 };
 
 const indexAllSuccess = function (data) {
+  data.blogs = data.blogs.reverse();
   for (let i = 0; i < data.blogs.length; i++) {
     let date = data.blogs[i].createdAt;
     data.blogs[i].createdAt = date.slice(0, 10);
