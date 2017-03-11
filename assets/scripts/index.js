@@ -28,6 +28,12 @@ $(() => {
   });
   $('#home-tab').on('click', function () {
     $('#content').html('');
+    $('#collapseCreatePage').collapse('hide');
+    $('#page-content').html('');
+  });
+  $('#blog-tab').on('click', function () {
+    $('#collapseCreatePage').collapse('hide');
+    $('#page-content').html('');
   });
   $('#page-menu-button').hide();
 });

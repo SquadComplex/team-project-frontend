@@ -22,6 +22,7 @@ const createSuccess = () => {
   $('#page-textarea').val('');
   $('#page-show-header').val('');
   $('#page-footer').val('');
+  $('#collapseCreatePage').collapse('hide');
 };
 
 const updateSuccess = (id) => {

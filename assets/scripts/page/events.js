@@ -71,6 +71,7 @@ const addPageHandlers = function () {
     $('#page-menu').hide();
     $('#page-menu-button').show();
     $('#page-content').html('');
+    $('#collapseCreatePage').collapse('hide');
   });
   $('#page-show-content').on('click', '#delete-page', onDestroyPage);
   $('#page-menu-button').on('click', function () {
@@ -78,7 +79,7 @@ const addPageHandlers = function () {
     $('#page-menu-button').hide();
     $('#page-menu').show();
   });
-  $('#content').on('click', '#dropdown-page', pageDropdownToggle);
+  $('#page-show-content').on('click', '#dropdown-page', pageDropdownToggle);
 };
 
 module.exports = {
