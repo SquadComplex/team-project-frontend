@@ -13,6 +13,13 @@ const onIndexBlogs = function (event) {
     .catch(ui.onError);
 };
 
+const onIndexAllBlogs = function (event) {
+  event.preventDefault();
+  api.indexBlogs()
+    .then(ui.indexAllSuccess)
+    .catch(ui.onError);
+};
+
 const onCreateBlogs = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -46,7 +53,8 @@ const onDestroyBlog = function (event) {
 };
 
 const addBlogHandlers = function () {
-  $('#index-blog').on('click', onIndexBlogs);
+  $('#index-blog').on('click', onIndexAllBlogs);
+  $('#index-my-blog').on('click', onIndexBlogs);
   $('#create-blog').on('submit', onCreateBlogs);
   $('#content').on('submit', '#update-blog', onUpdateBlog);
   $('#content').on('click', '#delete-blog', onDestroyBlog);
