@@ -22,9 +22,9 @@
         <br>
         <textarea rows="10" cols="50" id="blog-textarea" name="blog[content]" placeholder="Content">{{blog.content}}</textarea>
       </div>
-      <button type="submit" id="update-blog-btn" class="btn btn-success glyphicon glyphicon-pencil"></button>
+      <button type="submit" id="update-blog-btn" class="btn btn-success glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="bottom" title="Edit"></button>
     </form>
-    <button type="button" id="delete-blog" data-id="{{blog.id}}" class="btn btn-danger glyphicon glyphicon-trash"></button>
+    <button type="button" id="delete-blog" data-id="{{blog.id}}" class="btn btn-danger glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Delete"></button>
     <div id="clear-div"></div>
   </div>
   </div>

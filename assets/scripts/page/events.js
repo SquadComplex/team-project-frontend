@@ -32,14 +32,20 @@ const onCreatePages = function (event) {
   .catch(ui.failure);
 };
 
+const showAfterUpdate = function () {
+  let id = $('#update-page').data('id');
+  api.showPage(id)
+  .then(ui.showSuccess)
+  .catch(ui.failure);
+};
+
 const onUpdatePage = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   let id = event.target.getAttribute('data-id');
   api.updatePage(id, data)
   .then(ui.updateSuccess)
-  .then(api.indexPages)
-  .then(ui.indexSuccess)
+  .then(showAfterUpdate)
   .catch(ui.failure);
 };
 
@@ -48,17 +54,32 @@ const onDestroyPage = function (event) {
   let id = event.target.getAttribute('data-id');
   api.destroyPage(id)
   .then(ui.destroySuccess)
-  .then(api.indexPages)
-  .then(ui.indexSuccess)
   .catch(ui.failure);
+};
+
+const pageDropdownToggle = function (event) {
+  $(event.target).toggleClass('glyphicon-menu-down');
+  $(event.target).toggleClass('glyphicon-menu-up');
 };
 
 const addPageHandlers = function () {
   $('#index-page').on('click', onIndexPages);
   $('#create-page').on('submit', onCreatePages);
-  $('#page-content').on('submit', '#update-page', onUpdatePage);
+  $('#page-show-content').on('submit', '#update-page', onUpdatePage);
   $('#page-content').on('click', '#page-header', onShowPage);
-  $('#page-content').on('click', '#delete-page', onDestroyPage);
+  $('#page-content').on('click', '#page-header', function () {
+    $('#page-menu').hide();
+    $('#page-menu-button').show();
+    $('#page-content').html('');
+    $('#collapseCreatePage').collapse('hide');
+  });
+  $('#page-show-content').on('click', '#delete-page', onDestroyPage);
+  $('#page-menu-button').on('click', function () {
+    $('#page-show-content').html('');
+    $('#page-menu-button').hide();
+    $('#page-menu').show();
+  });
+  $('#page-show-content').on('click', '#dropdown-page', pageDropdownToggle);
 };
 
 module.exports = {
