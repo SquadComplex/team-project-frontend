@@ -13,6 +13,13 @@ const onIndexBlogs = function (event) {
     .catch(ui.onError);
 };
 
+const onIndexAllBlogs = function (event) {
+  event.preventDefault();
+  api.indexBlogs()
+    .then(ui.indexAllSuccess)
+    .catch(ui.onError);
+};
+
 const onCreateBlogs = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -29,7 +36,7 @@ const onUpdateBlog = function (event) {
   let data = getFormFields(event.target);
   let id = event.target.getAttribute('data-id');
   api.updateBlog(id, data)
-  .then(ui.createSuccess)
+  .then(ui.updateSuccess)
   .then(api.indexBlogs)
   .then(ui.indexSuccess)
   .catch(ui.failure);
@@ -45,11 +52,18 @@ const onDestroyBlog = function (event) {
   .catch(ui.failure);
 };
 
+const blogDropdownToggle = function (event) {
+  $(event.target).toggleClass('glyphicon-menu-down');
+  $(event.target).toggleClass('glyphicon-menu-up');
+};
+
 const addBlogHandlers = function () {
-  $('#index-blog').on('click', onIndexBlogs);
+  $('#index-blog').on('click', onIndexAllBlogs);
+  $('#index-my-blog').on('click', onIndexBlogs);
   $('#create-blog').on('submit', onCreateBlogs);
   $('#content').on('submit', '#update-blog', onUpdateBlog);
   $('#content').on('click', '#delete-blog', onDestroyBlog);
+  $('#content').on('click', '#dropdown-blog', blogDropdownToggle);
 };
 
 module.exports = {

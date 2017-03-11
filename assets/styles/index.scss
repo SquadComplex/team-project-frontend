@@ -8,3 +8,39 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 #CMStitle {
   font-size: 50px;
 }
+
+#page-header:hover {
+  color: #0000FF;
+  text-decoration: underline;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.text-body {
+  font-family: "Times New Roman", Times, serif;
+  white-space: pre-wrap;
+}
+
+.private-box {
+  float: left;
+}
+
+#delete-blog {
+  float: left;
+}
+
+#update-blog-btn {
+  float: left;
+}
+
+#clear-div {
+  clear: both;
+}
+
+#delete-page {
+  float: left;
+}
+
+#update-page-btn {
+  float: left;
+}

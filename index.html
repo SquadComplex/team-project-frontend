@@ -12,6 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
+      <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" id="home-tab" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+  <li role="presentation" id="blog-tab"><a href="#blogs" aria-controls="blogs" role="tab" data-toggle="tab">Blogs</a></li>
+  <li role="presentation" id="page-tab"><a href="#pages" aria-controls="pages" role="tab" data-toggle="tab">Pages</a></li>
+</ul>
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="home">
     <div id="authContainer">
       <div id="authButtonGroup">
       <button class="btn btn-primary" id="signUpButton" type="button" data-toggle="collapse" data-target="#collapseSignUp" aria-expanded="false" aria-controls="collapseSignUp">
@@ -98,9 +105,12 @@
       <div id="status-box"></div>
 
       <h1 id="CMStitle">Content Management System</h1>
-      <br>
-      <br>
-      <br>
+      <button id="index-blog" class="btn btn-info" type="button">Show All Blogs</button>
+      <div id="content-all-blogs" class="content">
+        </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="blogs">
     <form class="blogs" id="create-blog">
       <div class="form-group">
         <input type="text" name="blog[title]" placeholder="Title">
@@ -108,16 +118,48 @@
         <br>
         <br>
         <textarea rows="10" cols="50" name="blog[content]" placeholder="Content"></textarea>
+        <br>
+        <input type="checkbox" name="blog[isPrivate]" class="private-box hidden" value="unchecked" checked>
+        <label><input type="checkbox" name="blog[isPrivate]" class="private-box" value="checked">Make Private
+        </label>
       </div>
-      <button type="submit" class="btn btn-default">Add A Blog</button>
+      <button type="submit" class="btn btn-success">Add A Blog</button>
     </form>
-    </div>
     <br>
     <br>
-  <button id="index-blog" class="btn btn-primary" type="button">Show My Blogs</button>
+  <button id="index-my-blog" class="btn btn-info" type="button">Show My Blogs</button>
   <div id="content" class="content">
   </div>
-  <br>
-  <br>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="pages">
+    <button id="page-menu-button" class="btn btn-info" type="button">Go Back to Page Menu</button>
+    <div id="page-menu">
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCreatePage" aria-expanded="false" aria-controls="collapseCreatePage">
+  Create a new webpage!
+</button>
+<div class="collapse" id="collapseCreatePage">
+  <div class="well">
+    <form class="pages" id="create-page">
+      <div class="form-group">
+        <input type="text" name="page[header]" id="page-show-header" placeholder="Header">
+        <br>
+        <textarea rows="10" cols="50" id="page-textarea" name="page[body]" placeholder="Body"></textarea>
+        <br>
+        <input type="text" name="page[footer]" id="page-footer" placeholder="Footer">
+        <br>
+        <br>
+      </div>
+      <button type="submit" class="btn btn-success">Create</button>
+    </form>
+  </div>
+</div>
+  <button id="index-page" class="btn btn-info" type="button">Show My Pages</button>
+  <div id="page-content" class="content">
+  </div>
+  </div>
+  <div id="page-show-content" class="content">
+  </div>
+  </div>
     </body>
 </html>
