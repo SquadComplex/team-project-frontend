@@ -52,12 +52,18 @@ const onDestroyBlog = function (event) {
   .catch(ui.failure);
 };
 
+const blogDropdownToggle = function (event) {
+  $(event.target).toggleClass('glyphicon-menu-down');
+  $(event.target).toggleClass('glyphicon-menu-up');
+};
+
 const addBlogHandlers = function () {
   $('#index-blog').on('click', onIndexAllBlogs);
   $('#index-my-blog').on('click', onIndexBlogs);
   $('#create-blog').on('submit', onCreateBlogs);
   $('#content').on('submit', '#update-blog', onUpdateBlog);
   $('#content').on('click', '#delete-blog', onDestroyBlog);
+  $('#content').on('click', '#dropdown-blog', blogDropdownToggle);
 };
 
 module.exports = {

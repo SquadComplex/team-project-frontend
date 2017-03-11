@@ -31,6 +31,8 @@ const signInSuccess = () => {
   $('#blog-tab').show();
   $('#page-tab').show();
   $('.signin-field').val('');
+  $('#index-blog').hide();
+  $('#content-all-blogs').html('Welcome to the content management system.  You can have a blog with public and private entries, and you can make your own web pages.  Please enjoy your stay!');
 };
 
 const signInFail = () => {
@@ -56,6 +58,8 @@ const signOutSuccess = () => {
   $('#collapseChangePass').collapse('hide');
   $('#blog-tab').hide();
   $('#page-tab').hide();
+  $('#index-blog').show();
+  $('#content-all-blogs').html('');
 };
 
 module.exports = {

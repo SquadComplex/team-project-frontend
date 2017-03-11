@@ -23,6 +23,9 @@ $(() => {
   });
   $('#blog-tab').hide();
   $('#page-tab').hide();
+  $('#page-tab').on('click', function () {
+    $('#content').html('');
+  });
 });
 
 // use require without a reference to ensure a file is bundled
