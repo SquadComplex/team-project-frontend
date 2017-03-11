@@ -5,15 +5,28 @@
     <h1 class="header">{{page.header}}</h1>
     <p class="body"><pre class="text-body">{{page.body}}</pre></p>
     <footer class="footer">{{page.footer}}</footer>
+    <button class="btn btn-primary glyphicon glyphicon-menu-down" id="dropdown-page" type="button" data-toggle="collapse" data-target="#collapseUpdate{{page.id}}" aria-expanded="false" aria-controls="collapseUpdate{{page.id}}">
+</button>
+<div class="collapse" id="collapseUpdate{{page.id}}">
+  <div class="well">
     <form class="pages" id="update-page" data-id="{{page.id}}">
       <div class="form-group">
+        <label>Header
         <input type="text" name="page[header]" placeholder="Header" value="{{page.header}}">
+      </label>
+        <br>
         <textarea rows="10" cols="50" name="page[body]" placeholder="Body">{{page.body}}</textarea>
+        <br>
+        <label>Footer
         <input type="text" name="page[footer]" placeholder="Footer" value="{{page.footer}}">
+      </label>
       </div>
-      <button type="submit" class="btn btn-success">Update A Page</button>
+      <button type="submit" class="btn btn-success glyphicon glyphicon-pencil" id="update-page-btn"></button>
     </form>
-    <button type="button" id="delete-page" data-id="{{page.id}}" class="btn btn-danger">Delete A Page</button>
+    <button type="button" id="delete-page" data-id="{{page.id}}" class="btn btn-danger glyphicon glyphicon-trash"></button>
+    <div id="clear-div"></div>
+  </div>
+  </div>
   </div>
 
 </div>

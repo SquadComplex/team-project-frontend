@@ -133,21 +133,32 @@
   </div>
 
   <div role="tabpanel" class="tab-pane" id="pages">
-  <form class="pages" id="create-page">
-    <div class="form-group">
-      <input type="text" name="page[header]" placeholder="Header">
-      <textarea rows="10" cols="50" id="page-textarea" name="page[body]" placeholder="Body"></textarea>
-      <input type="text" name="page[footer]" placeholder="Footer">
-      <br>
-      <br>
-    </div>
-    <button type="submit" class="btn btn-success">Create A Page</button>
-  </form>
+    <button id="page-menu-button" class="btn btn-info" type="button">Go Back to Page Menu</button>
+    <div id="page-menu">
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCreatePage" aria-expanded="false" aria-controls="collapseCreatePage">
+  Create a new webpage!
+</button>
+<div class="collapse" id="collapseCreatePage">
+  <div class="well">
+    <form class="pages" id="create-page">
+      <div class="form-group">
+        <input type="text" name="page[header]" id="page-show-header" placeholder="Header">
+        <br>
+        <textarea rows="10" cols="50" id="page-textarea" name="page[body]" placeholder="Body"></textarea>
+        <br>
+        <input type="text" name="page[footer]" id="page-footer" placeholder="Footer">
+        <br>
+        <br>
+      </div>
+      <button type="submit" class="btn btn-success">Create</button>
+    </form>
+  </div>
+</div>
   <button id="index-page" class="btn btn-info" type="button">Show My Pages</button>
   <div id="page-content" class="content">
   </div>
-  <br>
-  <br>
+  </div>
+  <div id="page-show-content" class="content">
   </div>
   </div>
     </body>

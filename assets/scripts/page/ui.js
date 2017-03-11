@@ -14,19 +14,24 @@ const showSuccess = function (data) {
   let pageShowHtml = pageShowHandlebars({
     page: data.page,
   });
-  $('#page-content').html(pageShowHtml);
+  $('#page-show-content').html(pageShowHtml);
 };
 
 const createSuccess = () => {
   $('#status-box').text('Page Created.');
+  $('#page-textarea').val('');
+  $('#page-show-header').val('');
+  $('#page-footer').val('');
 };
 
-const updateSuccess = () => {
+const updateSuccess = (id) => {
   $('#status-box').text('Page Updated.');
+  return id;
 };
 
 const destroySuccess = () => {
   $('#status-box').text('Page Deleted.');
+  $('#page-show-content').html('')
 };
 
 module.exports = {
