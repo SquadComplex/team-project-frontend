@@ -12,13 +12,13 @@
     <form class="pages" id="update-page" data-id="{{page.id}}">
       <div class="form-group">
         <label>Header
-        <input type="text" name="page[header]" placeholder="Header" value="{{page.header}}">
+        <input type="text" name="page[header]" maxlength="300" placeholder="Header" value="{{page.header}}">
       </label>
         <br>
-        <textarea rows="10" cols="50" name="page[body]" placeholder="Body">{{page.body}}</textarea>
+        <textarea rows="10" cols="50" maxlength="20000" name="page[body]" placeholder="Body">{{page.body}}</textarea>
         <br>
         <label>Footer
-        <input type="text" name="page[footer]" placeholder="Footer" value="{{page.footer}}">
+        <input type="text" name="page[footer]" maxlength="300" placeholder="Footer" value="{{page.footer}}">
       </label>
       </div>
       <button type="submit" class="btn btn-success glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="bottom" title="Edit" id="update-page-btn"></button>
