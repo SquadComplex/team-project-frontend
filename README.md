@@ -43,7 +43,9 @@ Some of the technical hurdles we solved:
 * Reformatting the timestamp to display YYYY/MM/DD,
 * Getting the blogs to display from newest to oldest.
 
-This is the link to our User stories : http://imgur.com/QeySlyN
-This is the link to our ERD: http://imgur.com/9uYBda5
-This is our app deployment: https://squadcomplex.github.io/team-project-frontend/
-This is our link to our back end repo:https://github.com/SquadComplex/squad-complex-project-api
+
+
+* This is the link to our User stories : http://imgur.com/QeySlyN
+* This is the link to our ERD: http://imgur.com/9uYBda5
+* This is our app deployment: https://squadcomplex.github.io/team-project-frontend/
+* This is our link to our back end repo:https://github.com/SquadComplex/squad-complex-project-api
