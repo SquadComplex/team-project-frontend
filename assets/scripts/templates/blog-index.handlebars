@@ -3,13 +3,10 @@
 <div data-id="{{blog.id}}">
   <!-- Are we going to display id? -->
   <div class="handlebars-container">
-    <h3 class="title">{{blog.title}}</h3>
-    <p class="author">Written by: {{blog.author}}</p>
-    <p class="content"><pre class="text-body">{{blog.content}}</pre></p>
-    <p class="date">Date created: {{blog.createdAt}}</p>
+    <h3 class="title" id="blog-title-display">{{blog.title}}</h3>
     <button class="btn btn-primary glyphicon glyphicon-menu-down" id="dropdown-blog" type="button" data-toggle="collapse" data-target="#collapseUpdate{{blog.id}}" aria-expanded="false" aria-controls="collapseUpdate{{blog.id}}">
 </button>
-<div class="collapse" id="collapseUpdate{{blog.id}}">
+<div class="collapse update-collapse" id="collapseUpdate{{blog.id}}">
   <div class="well">
     <form class="blogs" id="update-blog" data-id="{{blog.id}}">
       <div class="form-group">
@@ -28,6 +25,11 @@
     <div id="clear-div"></div>
   </div>
   </div>
+  <p class="author" id="blog-author-display">Written by: {{blog.author}}</p>
+  <p class="date">Date created: {{blog.createdAt}}</p>
+    <p class="content"><pre class="text-body">{{blog.content}}</pre></p>
+
+
   </div>
 
 </div>

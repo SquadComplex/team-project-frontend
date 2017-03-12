@@ -78,6 +78,7 @@ const addPageHandlers = function () {
     $('#page-show-content').html('');
     $('#page-menu-button').hide();
     $('#page-menu').show();
+    $('page-show-message').html('');
   });
   $('#page-show-content').on('click', '#dropdown-page', pageDropdownToggle);
 };

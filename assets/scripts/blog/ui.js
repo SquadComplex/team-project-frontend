@@ -43,18 +43,18 @@ const indexAllPublicSuccess = function (data) {
 };
 
 const createSuccess = () => {
-  $('#status-box').text('Blog Created.');
+  $('#blog-message').text('Blog Created.');
   $('#blog-textarea').val('');
   $('#blog-show-title').val('');
   $('#blog-author').val('');
 };
 
 const updateSuccess = () => {
-  $('#status-box').text('Page Updated.');
+  $('#blog-message').text('Blog Updated.');
 };
 
 const destroySuccess = () => {
-  $('#status-box').text('Blog Deleted.');
+  $('#blog-message').text('Blog Deleted.');
 };
 
 module.exports = {
