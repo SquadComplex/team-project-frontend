@@ -52,7 +52,7 @@ const changePassFail = () => {
 };
 
 const signOutSuccess = () => {
-  $('#status-box').text('Sign Out Successful.  Please Sign Up or Sign In to play again.');
+  $('#status-box').text('Sign Out Successful.');
   $('#guestBlogMessage').show();
   $('#signUpButton').removeClass('hidden');
   $('#signInButton').removeClass('hidden');
