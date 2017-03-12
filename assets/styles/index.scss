@@ -1,9 +1,89 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
+body {
+  background-color: #DFDFE2;
+}
+
+#CMStitle {
+  font-family: 'Rock Salt', cursive;
+  margin: 0 30% 0 20%;
+}
+
+.btn-font {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.tab-pane {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav{
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.tab-item {
+  background-color: #7D7D83;
+}
+
+.nav > li > a {
+  color: white !important;
+}
+
+.nav > li.active > a {
+  color: black !important;
+}
+
+.nav > li > a:hover{
+  color: grey !important;
+}
+
+#content {
+  margin: 0 25%;
+}
+
+#content-all-blogs {
+  margin: 0 10%;
+}
+
+#welcome-message {
+  width: 520px;
+  margin: 0 18%;
+  font-size: 16px;
+}
+
+#blog-show-title {
+  margin-right: 50px;
+}
+
+#add-blog-btn {
+  margin-left: 94px;
+}
+
+#blog-input-container {
+  margin: 0 25% 20px 25%;
+}
+
+#guestBlogMessage {
+  margin: 0 30% 0 20%;
+  font-family: 'Josefin Sans', sans-serif;
+}
 #authContainer {
   height: 200px;
+  margin-top: 25px;
 }
+
+#status-box {
+  margin: 0 30% 0 28%;
+  font-size: 22px;
+}
+#index-blog {
+  margin: 20px 45% 0 20%;
+}
+
 
 #CMStitle {
   font-size: 50px;
@@ -17,8 +97,14 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 .text-body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Josefin Sans', sans-serif;
   white-space: pre-wrap;
+}
+
+.text-body-page {
+  font-family: 'Josefin Sans', sans-serif;
+  white-space: pre-wrap;
+  text-align: center;
 }
 
 .private-box {
@@ -47,4 +133,43 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 #index-my-blog {
   float: left;
+  margin-right: 40px;
+}
+
+#dropdown-blog {
+  float: left;
+  transform: translateY(8px);
+}
+
+#blog-title-display {
+  float: left;
+  clear: both;
+  margin: 20px 20px 0 0;
+}
+
+#blog-author-display {
+  clear: both;
+}
+
+.update-collapse {
+  clear: both;
+}
+
+#page-menu-button {
+  margin-top: 20px;
+}
+
+#new-page-button {
+    margin: 17px 0 17px 0;
+}
+
+#home-footer {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #444449;
+  text-align: center;
 }
