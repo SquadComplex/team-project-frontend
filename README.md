@@ -39,7 +39,7 @@ When we started as team we had some obstacles we had members with different skil
 Some of the technical hurdles we solved:
 * Getting the updated information to show after clicking the update button,
 * Working with public and private content,
-* Formatting the text within the <textarea>,
+* Formatting the text within the textarea,
 * Reformatting the timestamp to display YYYY/MM/DD,
 * Getting the blogs to display from newest to oldest.
 
