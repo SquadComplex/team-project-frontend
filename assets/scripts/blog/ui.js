@@ -29,9 +29,24 @@ const indexAllSuccess = function (data) {
   $('#content-all-blogs').html(blogsIndexHtml);
 };
 
+const indexAllPublicSuccess = function (data) {
+  data.blogs = data.blogs.reverse();
+  for (let i = 0; i < data.blogs.length; i++) {
+    let date = data.blogs[i].createdAt;
+    data.blogs[i].createdAt = date.slice(0, 10);
+  }
+
+  let blogsIndexHtml = allBlogHandlebars({
+    blogs: data.blogs,
+  });
+  $('#content').html(blogsIndexHtml);
+};
+
 const createSuccess = () => {
   $('#status-box').text('Blog Created.');
-
+  $('#blog-textarea').val('');
+  $('#blog-show-title').val('');
+  $('#blog-author').val('');
 };
 
 const updateSuccess = () => {
@@ -46,6 +61,7 @@ module.exports = {
   createSuccess,
   indexSuccess,
   indexAllSuccess,
+  indexAllPublicSuccess,
   updateSuccess,
   destroySuccess,
 };
