@@ -32,10 +32,11 @@ We were tasked with creating an app that build websites.  Random Bytes is for no
 
 ## General approach:
 
-    We have a diverse team with different strengths, weaknesses, ability levels, and experiences.  The general approach we took was to break down the project into smaller parts based on functionality, then work on them as a team.  We met each morning and decided together what were going to be the tasks that should be completed, time boxing what should be done by when.  We periodically did sprint checks to see if we were on schedule, making adjustments when needed.
-    Together we peer programed with a with a navigator, driver, researcher, and someone preparing for the next task.  We rotated  often to allow each member to experience the different roles.  We thought it wise to work on each stage of development together so that we all  learned from each other on every aspect of the project.
-    When we started as team we had some obstacles we had members with different skill and speed deltas so we had an open and honest team meeting to recognize how best to use the strengths of each member.
-    Some of the technical hurdles we solved:
+We have a diverse team with different strengths, weaknesses, ability levels, and experiences.  The general approach we took was to break down the project into smaller parts based on functionality, then work on them as a team.  We met each morning and decided together what were going to be the tasks that should be completed, time boxing what should be done by when.  We periodically did sprint checks to see if we were on schedule, making adjustments when needed.
+Together we peer programed with a with a navigator, driver, researcher, and someone preparing for the next task.  We rotated  often to allow each member to experience the different roles.  We thought it wise to work on each stage of development together so that we all  learned from each other on every aspect of the project.
+When we started as team we had some obstacles we had members with different skill and speed deltas so we had an open and honest team meeting to recognize how best to use the strengths of each member.
+
+Some of the technical hurdles we solved:
 * Getting the updated information to show after clicking the update button,
 * Working with public and private content,
 * Formatting the text within the <textarea>,
