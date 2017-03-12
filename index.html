@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Squad Complex</title>
+      <title>Random Bytes</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags unless you know what you are doing -->
@@ -13,25 +13,25 @@
     </head>
     <body class="container-fluid">
       <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" id="home-tab" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-  <li role="presentation" id="blog-tab"><a href="#blogs" aria-controls="blogs" role="tab" data-toggle="tab">Blogs</a></li>
-  <li role="presentation" id="page-tab"><a href="#pages" aria-controls="pages" role="tab" data-toggle="tab">Pages</a></li>
+  <li role="presentation" id="home-tab" class="active tab-item"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+  <li role="presentation" id="blog-tab" class="tab-item"><a href="#blogs" aria-controls="blogs" role="tab" data-toggle="tab">Blogs</a></li>
+  <li role="presentation" id="page-tab" class="tab-item"><a href="#pages" aria-controls="pages" role="tab" data-toggle="tab">Pages</a></li>
 </ul>
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="home">
     <div id="authContainer">
       <div id="authButtonGroup">
-      <button class="btn btn-primary" id="signUpButton" type="button" data-toggle="collapse" data-target="#collapseSignUp" aria-expanded="false" aria-controls="collapseSignUp">
+      <button class="btn btn-primary btn-font" id="signUpButton" type="button" data-toggle="collapse" data-target="#collapseSignUp" aria-expanded="false" aria-controls="collapseSignUp">
         Sign Up
       </button>
-      <button class="btn btn-primary" id="signInButton" type="button" data-toggle="collapse" data-target="#collapseSignIn" aria-expanded="false" aria-controls="collapseSignIn">
+      <button class="btn btn-primary btn-font" id="signInButton" type="button" data-toggle="collapse" data-target="#collapseSignIn" aria-expanded="false" aria-controls="collapseSignIn">
         Sign In
       </button>
-      <button class="btn btn-primary hidden" id="changePassButton" type="button" data-toggle="collapse" data-target="#collapseChangePass" aria-expanded="false" aria-controls="collapseChangePass">
+      <button class="btn btn-primary hidden btn-font" id="changePassButton" type="button" data-toggle="collapse" data-target="#collapseChangePass" aria-expanded="false" aria-controls="collapseChangePass">
         Change Password
       </button>
-      <button type="button" class="btn btn-primary hidden" id="sign-out">
-        Sign Out!
+      <button type="button" class="btn btn-primary hidden btn-font" id="sign-out">
+        Sign Out
       </button>
 
     <div class="accordion-group">
@@ -39,7 +39,7 @@
         <div class="well">
           <form id="sign-up">
             <fieldset>
-              <legend>Sign up!</legend>
+              <legend>Sign Up</legend>
               <label>
             Email
             <input type="text" id="account-name" class="signup-field" name="credentials[email]">
@@ -52,7 +52,7 @@
             Password Confirmation
             <input type="password" class="signup-field" name="credentials[password_confirmation]">
           </label>
-              <input type="submit" name="submit" value="Sign up!">
+              <input type="submit" name="submit" value="Sign Up">
             </fieldset>
             <div class="form-message" id="sign-up-message"></div>
           </form>
@@ -63,7 +63,7 @@
         <div class="well">
           <form id="sign-in">
            <fieldset>
-             <legend>Sign in!</legend>
+             <legend>Sign In</legend>
              <label>
              Email
              <input type="text" class="signin-field" id="account-name-signin" name="credentials[email]">
@@ -72,7 +72,7 @@
              Password
              <input type="password" class="signin-field" name="credentials[password]">
            </label>
-             <input type="submit" name="submit" value="Sign in!">
+             <input type="submit" name="submit" value="Sign In">
            </fieldset>
            <div class="form-message" id="sign-in-message"></div>
          </form>
@@ -83,7 +83,7 @@
         <div class="well">
           <form id="change-password">
            <fieldset>
-             <legend>Change Password!</legend>
+             <legend>Change Password</legend>
              <label>
              Current Password
              <input type="password" class="change-pass-field" name="passwords[old]">
@@ -92,7 +92,7 @@
              New Password
              <input type="password" class="change-pass-field" name="passwords[new]">
            </label>
-             <input type="submit" name="submit" value="Change Password!">
+             <input type="submit" name="submit" value="Change Password">
            </fieldset>
            <div class="form-message" id="change-pass-message"></div>
          </form>
@@ -104,38 +104,49 @@
 
       <div id="status-box"></div>
 
-      <h1 id="CMStitle">Content Management System</h1>
-      <button id="index-blog" class="btn btn-info" type="button">Show All Blogs</button>
+      <h1 id="CMStitle">Random Bytes</h1>
+      <br>
+      <h3 id="guestBlogMessage"> Check out what others are blogging about!</h3>
+      <button id="index-blog" class="btn btn-info btn-font" type="button">See Some Blogs</button>
+      <div id="welcome-message">
+      </div>
       <div id="content-all-blogs" class="content">
         </div>
     </div>
 
     <div role="tabpanel" class="tab-pane" id="blogs">
+    <div id="blog-input-container">
     <form class="blogs" id="create-blog">
       <div class="form-group">
-        <input type="text" name="blog[title]" placeholder="Title">
-        <input type="text" name="blog[author]" placeholder="Author">
+        <input type="text" name="blog[title]" id="blog-show-title" placeholder="Title">
+        <input type="text" name="blog[author]" id="blog-author" placeholder="Author">
         <br>
         <br>
-        <textarea rows="10" cols="50" name="blog[content]" placeholder="Content"></textarea>
+        <textarea rows="10" cols="50" name="blog[content]" id="blog-textarea" placeholder="Content"></textarea>
         <br>
         <input type="checkbox" name="blog[isPrivate]" class="private-box hidden" value="unchecked" checked>
         <label><input type="checkbox" name="blog[isPrivate]" class="private-box" value="checked">Make Private
         </label>
       </div>
-      <button type="submit" class="btn btn-success">Add A Blog</button>
+      <button type="submit" class="btn btn-success btn-font" id="add-blog-btn">Add A Blog</button>
     </form>
     <br>
     <br>
-  <button id="index-my-blog" class="btn btn-info" type="button">Show My Blogs</button>
+    <div id="blog-message">
+    </div>
+  <button id="index-public-blog" class="btn btn-info btn-font" type="button">Show All Public Blogs</button>
+  <button id="index-my-blog" class="btn btn-info btn-font" type="button">Show My Blogs</button>
+  </div>
   <div id="content" class="content">
   </div>
   </div>
 
   <div role="tabpanel" class="tab-pane" id="pages">
-    <button id="page-menu-button" class="btn btn-info" type="button">Go Back to Page Menu</button>
+    <div id="page-show-content" class="content">
+    </div>
+    <button id="page-menu-button" class="btn btn-info btn-font" type="button">Go Back to Page Menu</button>
     <div id="page-menu">
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCreatePage" aria-expanded="false" aria-controls="collapseCreatePage">
+    <button class="btn btn-primary btn-font" id="new-page-button" type="button" data-toggle="collapse" data-target="#collapseCreatePage" aria-expanded="false" aria-controls="collapseCreatePage">
   Create a new webpage!
 </button>
 <div class="collapse" id="collapseCreatePage">
@@ -150,16 +161,17 @@
         <br>
         <br>
       </div>
-      <button type="submit" class="btn btn-success">Create</button>
+      <button type="submit" class="btn btn-success btn-font">Create</button>
     </form>
   </div>
 </div>
-  <button id="index-page" class="btn btn-info" type="button">Show My Pages</button>
+<div id="page-message">
+</div>
+  <button id="index-page" class="btn btn-info btn-font" type="button">Show My Pages</button>
   <div id="page-content" class="content">
   </div>
   </div>
-  <div id="page-show-content" class="content">
   </div>
-  </div>
+  <footer id="home-footer">Built by Squad Complex</footer>
     </body>
 </html>

@@ -22,6 +22,7 @@ const signUpFail = () => {
 const signInSuccess = () => {
   let account = $('#account-name-signin').val();
   $('#status-box').text('Welcome, ' + account + ' !');
+  $('#guestBlogMessage').hide();
   $('#signUpButton').addClass('hidden');
   $('#signInButton').addClass('hidden');
   $('#changePassButton').removeClass('hidden');
@@ -32,7 +33,8 @@ const signInSuccess = () => {
   $('#page-tab').show();
   $('.signin-field').val('');
   $('#index-blog').hide();
-  $('#content-all-blogs').html('Welcome to the content management system.  You can have a blog with public and private entries, and you can make your own web pages.  Please enjoy your stay!');
+  $('#welcome-message').html('Welcome to the content management system. You can have a blog with public and private entries, and you can make your own web pages.  Please enjoy your stay!');
+  $('#content-all-blogs').html('');
 };
 
 const signInFail = () => {
@@ -51,6 +53,7 @@ const changePassFail = () => {
 
 const signOutSuccess = () => {
   $('#status-box').text('Sign Out Successful.  Please Sign Up or Sign In to play again.');
+  $('#guestBlogMessage').show();
   $('#signUpButton').removeClass('hidden');
   $('#signInButton').removeClass('hidden');
   $('#changePassButton').addClass('hidden');
@@ -60,6 +63,8 @@ const signOutSuccess = () => {
   $('#page-tab').hide();
   $('#index-blog').show();
   $('#content-all-blogs').html('');
+  $('#welcome-message').html('');
+  $('#home-footer').show();
 };
 
 module.exports = {

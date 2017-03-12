@@ -20,6 +20,13 @@ const onIndexAllBlogs = function (event) {
     .catch(ui.onError);
 };
 
+const onIndexAllPublicBlogs = function (event) {
+  event.preventDefault();
+  api.indexPublicBlogs()
+    .then(ui.indexAllPublicSuccess)
+    .catch(ui.onError);
+};
+
 const onCreateBlogs = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -59,6 +66,7 @@ const blogDropdownToggle = function (event) {
 
 const addBlogHandlers = function () {
   $('#index-blog').on('click', onIndexAllBlogs);
+  $('#index-public-blog').on('click', onIndexAllPublicBlogs);
   $('#index-my-blog').on('click', onIndexBlogs);
   $('#create-blog').on('submit', onCreateBlogs);
   $('#content').on('submit', '#update-blog', onUpdateBlog);

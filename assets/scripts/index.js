@@ -25,15 +25,18 @@ $(() => {
   $('#page-tab').hide();
   $('#page-tab').on('click', function () {
     $('#content').html('');
+    $('#home-footer').hide();
   });
   $('#home-tab').on('click', function () {
     $('#content').html('');
     $('#collapseCreatePage').collapse('hide');
     $('#page-content').html('');
+    $('#home-footer').show();
   });
   $('#blog-tab').on('click', function () {
     $('#collapseCreatePage').collapse('hide');
     $('#page-content').html('');
+    $('#home-footer').hide();
   });
   $('#page-menu-button').hide();
 });

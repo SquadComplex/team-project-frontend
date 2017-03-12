@@ -18,7 +18,7 @@ const showSuccess = function (data) {
 };
 
 const createSuccess = () => {
-  $('#status-box').text('Page Created.');
+  $('#page-message').text('Page Created.');
   $('#page-textarea').val('');
   $('#page-show-header').val('');
   $('#page-footer').val('');
@@ -26,13 +26,11 @@ const createSuccess = () => {
 };
 
 const updateSuccess = (id) => {
-  $('#status-box').text('Page Updated.');
   return id;
 };
 
 const destroySuccess = () => {
-  $('#status-box').text('Page Deleted.');
-  $('#page-show-content').html('')
+  $('#page-show-content').html('');
 };
 
 module.exports = {
