@@ -21,6 +21,13 @@ const indexBlogs = function () {
   }
 };
 
+const indexPublicBlogs = function () {
+    return $.ajax({
+      url: config.apiOrigin + '/blogs',
+      method: 'GET',
+    });
+};
+
 const createBlog = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/blogs',
@@ -55,6 +62,7 @@ const destroyBlog = function (id) {
 
 module.exports = {
   indexBlogs,
+  indexPublicBlogs,
   createBlog,
   updateBlog,
   destroyBlog,

@@ -32,7 +32,7 @@ const updateSuccess = (id) => {
 
 const destroySuccess = () => {
   $('#status-box').text('Page Deleted.');
-  $('#page-show-content').html('')
+  $('#page-show-content').html('');
 };
 
 module.exports = {

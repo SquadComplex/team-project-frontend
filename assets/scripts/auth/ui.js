@@ -22,6 +22,7 @@ const signUpFail = () => {
 const signInSuccess = () => {
   let account = $('#account-name-signin').val();
   $('#status-box').text('Welcome, ' + account + ' !');
+  $('#guestBlogMessage').hide();
   $('#signUpButton').addClass('hidden');
   $('#signInButton').addClass('hidden');
   $('#changePassButton').removeClass('hidden');
@@ -51,6 +52,7 @@ const changePassFail = () => {
 
 const signOutSuccess = () => {
   $('#status-box').text('Sign Out Successful.  Please Sign Up or Sign In to play again.');
+  $('#guestBlogMessage').show();
   $('#signUpButton').removeClass('hidden');
   $('#signInButton').removeClass('hidden');
   $('#changePassButton').addClass('hidden');
