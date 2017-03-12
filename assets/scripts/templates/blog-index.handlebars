@@ -11,13 +11,13 @@
     <form class="blogs" id="update-blog" data-id="{{blog.id}}">
       <div class="form-group">
         <label>Title
-        <input type="text" name="blog[title]" id="blog-title" placeholder="Title" value="{{blog.title}}">
+        <input type="text" name="blog[title]" maxlength="150" id="blog-title" placeholder="Title" value="{{blog.title}}">
       </label>
       <label>Author
-        <input type="text" name="blog[author]" id="blog-author" placeholder="Author" value="{{blog.author}}">
+        <input type="text" name="blog[author]" maxlength="150" id="blog-author" placeholder="Author" value="{{blog.author}}">
       </label>
         <br>
-        <textarea rows="10" cols="50" id="blog-textarea" name="blog[content]" placeholder="Content">{{blog.content}}</textarea>
+        <textarea rows="10" cols="50" id="blog-textarea" maxlength="10000" name="blog[content]" placeholder="Content">{{blog.content}}</textarea>
       </div>
       <button type="submit" id="update-blog-btn" class="btn btn-success glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="bottom" title="Edit"></button>
     </form>

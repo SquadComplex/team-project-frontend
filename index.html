@@ -42,15 +42,15 @@
               <legend>Sign Up</legend>
               <label>
             Email
-            <input type="text" id="account-name" class="signup-field" name="credentials[email]">
+            <input type="text" maxlength="100" id="account-name" class="signup-field" name="credentials[email]">
           </label>
               <label>
             Password
-            <input type="password" class="signup-field" name="credentials[password]">
+            <input type="password" maxlength="100" class="signup-field" name="credentials[password]">
           </label>
               <label>
             Password Confirmation
-            <input type="password" class="signup-field" name="credentials[password_confirmation]">
+            <input type="password" maxlength="100" class="signup-field" name="credentials[password_confirmation]">
           </label>
               <input type="submit" name="submit" value="Sign Up">
             </fieldset>
@@ -66,13 +66,13 @@
              <legend>Sign In</legend>
              <label>
              Email
-             <input type="text" class="signin-field" id="account-name-signin" name="credentials[email]">
+             <input type="text" class="signin-field" maxlength="100" id="account-name-signin" name="credentials[email]">
            </label>
              <label>
              Password
-             <input type="password" class="signin-field" name="credentials[password]">
+             <input type="password" class="signin-field" maxlength="100" name="credentials[password]">
            </label>
-             <input type="submit" name="submit" value="Sign In">
+             <input type="submit" name="submit" maxlength="100" value="Sign In">
            </fieldset>
            <div class="form-message" id="sign-in-message"></div>
          </form>
@@ -86,11 +86,11 @@
              <legend>Change Password</legend>
              <label>
              Current Password
-             <input type="password" class="change-pass-field" name="passwords[old]">
+             <input type="password" class="change-pass-field" maxlength="100" name="passwords[old]">
            </label>
              <label>
              New Password
-             <input type="password" class="change-pass-field" name="passwords[new]">
+             <input type="password" class="change-pass-field" maxlength="100" name="passwords[new]">
            </label>
              <input type="submit" name="submit" value="Change Password">
            </fieldset>
@@ -118,11 +118,11 @@
     <div id="blog-input-container">
     <form class="blogs" id="create-blog">
       <div class="form-group">
-        <input type="text" name="blog[title]" id="blog-show-title" placeholder="Title">
-        <input type="text" name="blog[author]" id="blog-author" placeholder="Author">
+        <input type="text" name="blog[title]" maxlength="150" id="blog-show-title" placeholder="Title">
+        <input type="text" name="blog[author]" id="blog-author" maxlength="150" placeholder="Author">
         <br>
         <br>
-        <textarea rows="10" cols="50" name="blog[content]" id="blog-textarea" placeholder="Content"></textarea>
+        <textarea rows="10" cols="50" name="blog[content]" maxlength="10000" id="blog-textarea" placeholder="Content"></textarea>
         <br>
         <input type="checkbox" name="blog[isPrivate]" class="private-box hidden" value="unchecked" checked>
         <label><input type="checkbox" name="blog[isPrivate]" class="private-box" value="checked">Make Private
@@ -153,11 +153,11 @@
   <div class="well">
     <form class="pages" id="create-page">
       <div class="form-group">
-        <input type="text" name="page[header]" id="page-show-header" placeholder="Header">
+        <input type="text" name="page[header]" id="page-show-header" maxlength="300" placeholder="Header">
         <br>
-        <textarea rows="10" cols="50" id="page-textarea" name="page[body]" placeholder="Body"></textarea>
+        <textarea rows="10" cols="50" id="page-textarea" name="page[body]" maxlength="20000" placeholder="Body"></textarea>
         <br>
-        <input type="text" name="page[footer]" id="page-footer" placeholder="Footer">
+        <input type="text" name="page[footer]" id="page-footer" maxlength="300" placeholder="Footer">
         <br>
         <br>
       </div>
