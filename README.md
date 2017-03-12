@@ -44,6 +44,7 @@ Some of the technical hurdles we solved:
 * Getting the blogs to display from newest to oldest.
 
 
+### Links
 
 * This is the link to our User stories : http://imgur.com/QeySlyN
 * This is the link to our ERD: http://imgur.com/9uYBda5
