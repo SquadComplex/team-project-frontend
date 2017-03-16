@@ -14,7 +14,7 @@ const onSignUp = function (event) {
   if (data.credentials.password === data.credentials.password_confirmation) {
     api.signUp(data)
       .then(ui.signUpSuccess)
-      .catch(ui.signUpFailure);
+      .catch(ui.signUpFail);
   } else {
     ui.signUpFail();
   }

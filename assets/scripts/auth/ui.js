@@ -16,7 +16,7 @@ const signUpSuccess = () => {
 };
 
 const signUpFail = () => {
-  $('#sign-up-message').text('Either the email is not valid or the passwords do not match.');
+  $('#status-box').text('Either the email is not valid or the passwords do not match.');
 };
 
 const signInSuccess = () => {
@@ -32,13 +32,14 @@ const signInSuccess = () => {
   $('#blog-tab').show();
   $('#page-tab').show();
   $('.signin-field').val('');
+  $('.signup-field').val('');
   $('#index-blog').hide();
   $('#welcome-message').html('Welcome to the content management system. You can have a blog with public and private entries, and you can make your own web pages.  Please enjoy your stay!');
   $('#content-all-blogs').html('');
 };
 
 const signInFail = () => {
-  $('#sign-in-message').text('The information is incorrect.');
+  $('#status-box').text('The information is incorrect.');
 };
 
 const changePassSuccess = () => {
@@ -48,7 +49,7 @@ const changePassSuccess = () => {
 };
 
 const changePassFail = () => {
-  $('#change-pass-message').text('Please fill out the fields.');
+  $('#status-box').text('Please fill out the fields.');
 };
 
 const signOutSuccess = () => {
