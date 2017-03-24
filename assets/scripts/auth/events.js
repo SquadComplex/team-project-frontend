@@ -17,6 +17,7 @@ const onSignUp = function (event) {
       .catch(ui.signUpFail);
   } else {
     ui.signUpFail();
+    //do we still need an else fail with a catch?
   }
 };
 

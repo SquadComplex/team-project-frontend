@@ -49,12 +49,13 @@ const changePassSuccess = () => {
 };
 
 const changePassFail = () => {
-  $('#status-box').text('Please fill out the fields.');
+  $('#status-box').text('Please make sure you entered your current password correctly, and filled out all the fields.');
 };
 
 const signOutSuccess = () => {
   $('#status-box').text('Sign Out Successful.');
   $('#guestBlogMessage').show();
+  $('.change-pass-field').val('');
   $('#signUpButton').removeClass('hidden');
   $('#signInButton').removeClass('hidden');
   $('#changePassButton').addClass('hidden');
